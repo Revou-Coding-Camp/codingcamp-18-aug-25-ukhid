@@ -3,22 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List</title>
 
     <!-- CSS External -->
     <link rel="stylesheet" href="style/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <!-- Hero website -->
     <header>
-        <h1>Todo List</h1>
+        <h1 class="text-4xl font-bold">Todo List</h1>
     </header>
 
     <!-- main content -->
-    <main></main>
+    <main>
+        <form >
+            <input type="text" id="task-input" placeholder="Add a new task" class="border p-2 rounded">
+            <input type="date" id="due-date-input" placeholder="Add a new task" class="border p-2 rounded">
+            <button type="button" onclick="validateForm();" class="bg-red-500 text-black p-[8px] rounded">Add</button>
+        </form>
+
+        <section>
+            <button class="bg-green-500 p-2 rounded">Filter</button>
+            <button onclick="deleteAll();" class="bg-blue-500 p-2 rounded">Delete ALL</button>
+        </section>
+
+        <section>
+            <ul class="mx-4">
+                <li class="border-b py-2">Task 1</li>
+                <li class="border-b py-2">Task 2</li>
+                <li class="border-b py-2">Task 3</li>
+            </ul>
+        </section>
+        
+    </main>
 
     <footer>
-        <span>&copy 2025 Ukhid</span>
+        <span>&copy; 2025 Ukhid, All rights reserved</span>
     </footer>
 
     <!-- JS External -->
