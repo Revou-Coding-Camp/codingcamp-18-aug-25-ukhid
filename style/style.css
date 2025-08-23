@@ -1,5 +1,104 @@
+:root {
+    --dark-bg: #1a1b23;
+    --card-bg: #2a2d3a;
+    --accent: #6366f1;
+}
+
 body {
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    align-content: center;
+}
+
+.bg-dark-custom {
+    background-color: var(--dark-bg);
+}
+.bg-card-custom {
+    background-color: var(--card-bg);
+}
+.text-accent {
+    color: var(--accent);
+}
+.bg-accent {
+    background-color: var(--accent);
+}
+.border-accent {
+    border-color: var(--accent);
+}
+
+.hover\:bg-accent:hover {
+    background-color: #4f46e5;
+}
+.hover\:text-accent:hover {
+    color: #4f46e5;
+}
+
+/* Dropdown */
+.dropdown-item {
+    color: #e537eb;
+}
+.dropdown-item:hover {
+    background-color: #4b5563 !important;
+}
+#dropdown-arrow.rotate {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 480px) {
+    .w-full {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .flex.gap-2 {
+        flex-wrap: wrap;
+    }
+    
+    .flex-1 {
+        min-width: 200px;
+    }
+
+}
+
+/* Custom Scrollbar for Task List */
+#task-list::-webkit-scrollbar {
+    width: 4px;
+}
+#task-list::-webkit-scrollbar-track {
+    background: var(--card-bg);
+}
+#task-list::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 2px;
+}
+#task-list::-webkit-scrollbar-thumb:hover {
+    background: #4f46e5;
+}
+
+/* Focus States */
+input:focus,
+button:focus {
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+/* Animation for Task Items */
+.task-item {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    color: white;
 }
